@@ -1,7 +1,4 @@
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 
 public class Main {
 
@@ -10,13 +7,12 @@ public class Main {
        int goalArr[] = {1,2,3,8,0,4,7,6,5};
        // int goalArr[] = {2,8,3,1,6,4,0,7,5};
 
+        //Node head = new Node(arr);
 
-        Node head = new Node(arr);
+       // head.printArr();
+       // head.expandMoves();
 
-        head.printArr();
-        head.expandMoves();
-
-        dfsSearch(head, goalArr);
+       // dfsSearch(head, goalArr);
 
 
        // for(int i = 0; i < head.getChildList().size(); i++ ){
@@ -33,12 +29,15 @@ public class Main {
     {
         boolean goalFound = false;
         Queue<Node> q = new LinkedList<>();
-        List<Node> childNode = new LinkedList<>();
         q.add(head);
-
-        List<Node> pathToSolution = new LinkedList<>();
         List<Node> openList = new LinkedList<>();
+
+        List<Node> childNode = new LinkedList<>();
         List<Node> closedList = new LinkedList<>();
+        List<Node> pathToSolution = new LinkedList<>();
+
+
+
         int count = 0;
         openList.add(head);
 
@@ -173,4 +172,12 @@ public class Main {
 
         return contains;
     }
+
+    public static void aStarSearch(Node head, int goalArr[]){
+
+
+    }
+
+
+
 }
